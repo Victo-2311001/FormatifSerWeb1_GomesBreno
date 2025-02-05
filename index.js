@@ -1,8 +1,7 @@
 // Importer les modules
 import express from 'express';
-import dotenv from 'dotenv';
 
-import salutationsRoute from './salutations.route.js';
+import recupererSalutations from './salutations.route.js';
 
 // Créer une application express
 const app = express();
@@ -15,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 // On associe la route /api au router importé
-app.use('/api', salutationsRoute);
+app.use('/api', recupererSalutations);
 
 
 app.listen(PORT, () => {

@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
 
 router.get('/salutations/liste', getAllSalutations);
 
+
+
 router.get('/salutations', getRandomSalutation)
 
 router.get('/salutations/ajouter', addSalutation)

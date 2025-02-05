@@ -1,9 +1,18 @@
-import { salutations } from './salutations.model.js';
+import { recupererSalutations } from './salutations.model.js';
 
 // Fonction pour récupérer toutes les salutations
 const getAllSalutations = (req, res) => {
-    res.json(salutations);
-};
+    recupererSalutations((erreur, resultats) => {
+      if (erreur) {
+        return res.status(500).json({ error: erreur.message });
+      }
+      res.json(resultats);
+    });
+  };
+
+
+
+
 
 // Fonction pour récupérer une salutation aléatoire, éventuellement filtrée par langue
 const getRandomSalutation = (req, res) => {
