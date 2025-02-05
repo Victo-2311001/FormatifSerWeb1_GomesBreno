@@ -1,5 +1,6 @@
-// Importer le module express
+// Importer les modules
 import express from 'express';
+import dotenv from 'dotenv';
 
 import salutationsRoute from './salutations.route.js';
 
