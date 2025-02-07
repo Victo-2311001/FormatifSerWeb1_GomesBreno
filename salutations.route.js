@@ -1,5 +1,5 @@
 import express from 'express';
-import { addSalutation, getAllSalutations, getRandomSalutation } from './salutations.controller.js';
+import { getAllSalutations, getFiltredSalutations } from './salutations.controller.js';
 
 const router = express.Router();    
 
@@ -9,11 +9,7 @@ router.get('/', (req, res) => {
 
 router.get('/salutations/liste', getAllSalutations);
 
-
-
-router.get('/salutations', getRandomSalutation)
-
-router.get('/salutations/ajouter', addSalutation)
+router.get('/salutations', getFiltredSalutations)
 
 // On exporte le router pour pouvoir l'utiliser dans index.js
 export default router;

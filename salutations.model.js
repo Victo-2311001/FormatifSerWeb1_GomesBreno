@@ -14,4 +14,15 @@ function recupererSalutations(callback) {
     });
   }
   
-  export { recupererSalutations };
+function filtrerSalutations(langue, callback){
+  const requete = `SELECT * FROM salutations where code_langue = ?`;
+
+  db.query(requete, [langue], (erreur, resultats) => {
+    if (erreur){
+      return callback(erreur);
+    }
+    return callback(null, resultats);
+  });
+}  
+  
+  export { recupererSalutations, filtrerSalutations };
