@@ -1,7 +1,7 @@
 import db from './src/config/db.js';
 
 function recupererSalutations(callback) {
-    const requete = `SELECT * FROM salutation`;
+    const requete = `SELECT * FROM salutations`;
   
     //Récupérer toutes les lignes de la table "salutation"
     db.query(requete, (erreur, resultats) => {
