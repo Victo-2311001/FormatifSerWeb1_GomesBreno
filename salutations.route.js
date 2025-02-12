@@ -2,7 +2,7 @@ import express from 'express';
 import { getAllSalutations, getFiltredSalutations } from './salutations.controller.js';
 
 const router = express.Router();    
-
+    
 router.get('/', (req, res) => {
     res.send("<h1>Bienvenue à mon API</h1>");
 });
